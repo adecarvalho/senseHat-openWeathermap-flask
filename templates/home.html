@@ -1,0 +1,55 @@
+{% extends 'base.html'%}
+
+
+{% block body %}
+<div class="container">
+	<div class="raw">
+		<h1>Rpi Sense Hat </h1>
+	</div>
+
+
+	{% if datas %}
+	<div class="row">
+		<div class="col s12 m6">
+			<div class="card ">
+				<div class="card-content ">
+					<ul class="collection">
+						<!--  -->
+						<li class="collection-item">
+							<div>
+								<i class="material-icons">ac_unit</i>
+								<h6>{{ datas.get("temperature")}} C</h6>
+							</div>
+
+						</li>
+						<!--  -->
+						<li class="collection-item">
+							<div><i class="material-icons">landscape</i>
+								<h6>{{ datas.get("pressure")}} hPa</h6>
+							</div>
+						</li>
+						<!--  -->
+						<li class="collection-item">
+							<div><i class="material-icons">invert_colors</i>
+								<h6>{{ datas.get("humidity")}} %</h6>
+							</div>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	{% endif %}
+
+
+
+
+
+
+</div>
+
+
+
+{% endblock body %}
